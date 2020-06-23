@@ -112,6 +112,7 @@ $black: #000000
     font-family: 'Segoe UI Light', sans-serif
     font-weight: 300
     font-size: 3.25rem
+    margin: 0
 
   &__search
     color: $gray
@@ -137,7 +138,14 @@ $black: #000000
     width: 100%
     padding: (30px / 1920px * 100vw)
     background-color: $lightgreen
+    margin-top: (80px / 1920px * 100vw)
 
+  &__columns
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: (120px / 1920px * 100vw)
+    width: 100%
+    margin: (120px / 1920px * 100vw) 0
 
 .list
   display: flex
@@ -185,7 +193,7 @@ $black: #000000
   grid-template-columns: 1fr 1fr
   grid-gap: (120px / 1920px * 100vw)
   width: 100%
-  margin-top: (120px / 1920px * 100vw)
+  margin: (120px / 1920px * 100vw) 0
 
 .calendar
   display: flex
@@ -194,6 +202,7 @@ $black: #000000
   align-items: center
   justify-self: flex-start
   width: 100%
+  box-sizing: border-box
 
   &__header
     grid-column: 1 / 8
@@ -244,4 +253,85 @@ $black: #000000
         background-color: $green
         color: $white
         transition: .25s
+
+.timepicker
+  display: flex
+  flex-flow: row wrap
+  align-items: center
+  justify-content: flex-start
+  width: 100%
+  margin-top: (30px / 1920px * 100vw)
+
+  &__time
+    font-family: 'Roboto Regular', sans-serif
+    font-weight: 400
+    font-size: 2.5rem
+    border: 5px solid $green
+    background-color: $lightgreen
+    box-sizing: border-box
+    height: 4.3125rem
+    width: 10.75rem
+    border-radius: 2.15625rem
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-right: (30px / 1920px * 100vw)
+    transition: .25s
+
+    &:hover
+      border-width: 0
+      background-color: $green
+      color: $white
+      transition: .25s
+
+.personal
+  display: flex
+  flex-flow: column nowrap
+  align-items: flex-start
+  justify-content: flex-start
+  width: 100%
+
+  &__title
+    font-family: 'Segoe UI Light', sans-serif
+    font-weight: 300
+    font-size: 3.25rem
+    margin: 0 0 (60px / 1920px * 100vw) 0
+
+  &__label
+    font-family: 'Segoe UI Light', sans-serif
+    font-weight: 300
+    font-size: 3rem
+
+  &__input
+    color: $gray
+    font-family: 'Segoe UI Light', sans-serif
+    font-weight: 300
+    font-size: 2.5rem
+    width: 100%
+    height: 69px
+    border: 5px solid $green
+    box-sizing: border-box
+    border-radius: 34.5px
+    padding-left: 34.5px
+    margin-bottom: (60px / 1920px * 100vw)
+
+    &:focus
+      outline: none
+
+  &__confirmation
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    justify-content: flex-start
+
+  &__checkbox
+    width: 50px
+    height: 50px
+    border: 5px solid $green
+    box-sizing: border-box
+
+    &:focus
+      background-color: $green
+
+
 
