@@ -1,0 +1,100 @@
+$white: #ffffff
+$lightgreen: rgba(156, 204, 101, 0.25)
+$green: #9CCC65
+$red: #EF5350
+$gray: rgba(0, 0, 0, 0.75)
+$black: #000000
+
+.page
+  display: flex
+  flex-flow: column nowrap
+  align-items: flex-start
+  justify-content: flex-start
+  width: 100%
+  height: 100%
+  margin: 0
+
+.hero
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: flex-start
+  height: 100vh
+  width: 100%
+  background: url("../img/hero.jfif") center center no-repeat
+  background-size: cover
+
+  &__acrylic
+    background-color: rgba(0, 0, 0, .625)
+    backdrop-filter: blur(5px)
+    width: 100%
+
+  &__title
+    color: $white
+    font-family: 'Roboto Regular', sans-serif
+    font-weight: 400
+    font-size: 6rem
+    margin: (30px / 1920px * 100%) 0 0 (30px / 1920px * 100%)
+    line-height: 1
+
+
+  &__description
+    color: $green
+    font-family: 'Roboto Regular', sans-serif
+    font-weight: 400
+    font-size: 4rem
+    margin: 0 0 (30px / 1920px * 100%) (30px / 1920px * 100%)
+
+.main
+  display: flex
+  flex-flow: column nowrap
+  align-items: center
+  justify-content: flex-start
+  padding: (60px / 1920px * 100%)
+  width: 100%
+  box-sizing: border-box
+
+  &__mode
+    color: $black
+    font-family: 'Segoe UI Light',sans-serif
+    font-weight: 300
+    font-size: 4rem
+    margin: 0 0 (150px / 1920px * 100%) 0
+
+.step
+  display: flex
+  flex-flow: column nowrap
+  align-items: flex-start
+  justify-content: flex-start
+  width: 100%
+
+  &__header
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    justify-content: space-between
+    width: 100%
+
+  &__title
+    color: $black
+    font-family: 'Segoe UI Light', sans-serif
+    font-weight: 300
+    font-size: 3.25rem
+
+  &__search
+    color: $gray
+    font-family: 'Segoe UI Light', sans-serif
+    font-weight: 300
+    font-size: 2.5rem
+    height: 69px
+    width: 415px
+    border: 5px solid $green
+    border-radius: 34.5px
+    box-sizing: border-box
+    padding-left: 34.5px
+
+    &:focus
+      outline: none
+
+.list
+
