@@ -6,10 +6,10 @@
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
 
-<!--    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 
     <link href="css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/fonts.css">
+    <link href="css/fonts.css" rel="stylesheet">
 
     <title>Электронная регистратура</title>
 </head>
@@ -21,7 +21,10 @@
     </div>
 </header>
 <main class="main">
-    <h2 class="main__mode">Запись на приём</h2>
+    <div class="main__header">
+        <button class="main__back material-icons-round">keyboard_arrow_left</button>
+        <h2 class="main__mode">Запись на приём</h2>
+    </div>
     <!--    step 1    -->
     <article class="step">
         <div class="step__header">
@@ -45,6 +48,104 @@
                 <span class="item__address">Россия, 390023, обл Рязанская, г Рязань, ул Циолковского, д.10</span>
             </div>
         </section>
+    </article>
+    <!--    step 2    -->
+    <article class="step">
+        <div class="step__header">
+            <label class="step__title" for="search-2">Шаг 2. Выбор специализации</label>
+            <input class="step__search" id="search-2" placeholder="Поиск" type="text">
+        </div>
+        <section class="list">
+            <div class="item">
+                <span class="item__title">КАРДИОЛОГИЯ</span>
+            </div>
+            <div class="item">
+                <span class="item__title">КАРДИОЛОГИЯ</span>
+            </div>
+            <div class="item">
+                <span class="item__title">КАРДИОЛОГИЯ</span>
+            </div>
+        </section>
+    </article>
+    <!--    step 3   -->
+    <article class="step">
+        <h3 class="step__title">Шаг 3. Выбор дня и времени посещения</h3>
+        <span class="step__specialization">КАРДИОЛОГИЯ</span>
+        <div class="datepicker">
+            <section class="calendar">
+                <span class="calendar__header">ИЮНЬ, 2020</span>
+                <div class="calendar__date-wrap">
+                    <span class="calendar__date">1</span>
+                    <span class="calendar__date">2</span>
+                    <span class="calendar__date">3</span>
+                    <span class="calendar__date">4</span>
+                    <span class="calendar__date">5</span>
+                    <span class="calendar__date calendar__date_holiday">6</span>
+                    <span class="calendar__date calendar__date_holiday">7</span>
+                    <span class="calendar__date">8</span>
+                    <span class="calendar__date">9</span>
+                    <span class="calendar__date">10</span>
+                    <span class="calendar__date">11</span>
+                    <span class="calendar__date">12</span>
+                    <span class="calendar__date calendar__date_holiday">13</span>
+                    <span class="calendar__date calendar__date_holiday">14</span>
+                    <span class="calendar__date">15</span>
+                    <span class="calendar__date">16</span>
+                    <span class="calendar__date  calendar__date_today">17</span>
+                    <span class="calendar__date">18</span>
+                    <span class="calendar__date">19</span>
+                    <span class="calendar__date calendar__date_holiday">20</span>
+                    <span class="calendar__date calendar__date_holiday">21</span>
+                    <span class="calendar__date calendar__date_available">22</span>
+                    <span class="calendar__date">23</span>
+                    <span class="calendar__date">24</span>
+                    <span class="calendar__date calendar__date_available">25</span>
+                    <span class="calendar__date">26</span>
+                    <span class="calendar__date calendar__date_holiday">27</span>
+                    <span class="calendar__date calendar__date_holiday">28</span>
+                    <span class="calendar__date">29</span>
+                    <span class="calendar__date">30</span>
+                </div>
+            </section>
+            <section class="calendar">
+                <span class="calendar__header">ИЮЛЬ, 2020</span>
+                <div class="calendar__date-wrap">
+                    <span class="calendar__date"></span>
+                    <span class="calendar__date"></span>
+                    <span class="calendar__date">1</span>
+                    <span class="calendar__date">2</span>
+                    <span class="calendar__date">3</span>
+                    <span class="calendar__date calendar__date_holiday">4</span>
+                    <span class="calendar__date calendar__date_holiday">5</span>
+                    <span class="calendar__date">6</span>
+                    <span class="calendar__date">7</span>
+                    <span class="calendar__date calendar__date_available">8</span>
+                    <span class="calendar__date">9</span>
+                    <span class="calendar__date">10</span>
+                    <span class="calendar__date calendar__date_holiday">11</span>
+                    <span class="calendar__date calendar__date_holiday">12</span>
+                    <span class="calendar__date">13</span>
+                    <span class="calendar__date">14</span>
+                    <span class="calendar__date">15</span>
+                    <span class="calendar__date">16</span>
+                    <span class="calendar__date">17</span>
+                    <span class="calendar__date calendar__date_holiday">18</span>
+                    <span class="calendar__date calendar__date_holiday">19</span>
+                    <span class="calendar__date calendar__date_available">20</span>
+                    <span class="calendar__date">21</span>
+                    <span class="calendar__date">22</span>
+                    <span class="calendar__date calendar__date_available">23</span>
+                    <span class="calendar__date">24</span>
+                    <span class="calendar__date calendar__date_holiday">25</span>
+                    <span class="calendar__date calendar__date_holiday">26</span>
+                    <span class="calendar__date">27</span>
+                    <span class="calendar__date">28</span>
+                    <span class="calendar__date">29</span>
+                    <span class="calendar__date">30</span>
+                    <span class="calendar__date">31</span>
+                </div>
+            </section>
+        </div>
     </article>
 </main>
 </body>
