@@ -155,9 +155,9 @@
         </div>
     </article>
     <!--    step 4    -->
-    <article class="step">
+    <form action="" method="post" class="step">
         <div class="step__columns">
-            <form action="" class="personal" method="post">
+            <section class="personal">
                 <h3 class="personal__title">Шаг 4. Введите данные о себе</h3>
                 <label class="personal__label" contenteditable="true" for="name">ФИО<span
                         style="color: #EF5350">*</span></label>
@@ -176,12 +176,43 @@
                 <label class="personal__label" contenteditable="true" for="e-mail">Контактный e-mail</label>
                 <input class="personal__input" id="e-mail" name="e-mail" placeholder="Введите Ваш e-mail" type="email">
 
-                <div class="personal__confirmation">
+                <label class="personal__confirmation" for="data">
                     <input class="personal__checkbox" id="data" required type="checkbox">
-                    <label class="personal__label-check" for="data">Даю согласие на обработку персональных данных<span
-                            style="color: #EF5350">*</span></label>
-                </div>
-            </form>
+                    <span class="personal__checkmark material-icons-round"></span>
+                    <span class="personal__label-check">
+                        Даю согласие на обработку персональных данных<span
+                            style="color: #EF5350">*</span>
+                    </span>
+                </label>
+
+            </section>
+            <section class="record">
+                <h3 class="record__title">Данные о записи</h3>
+                <span class="record__header">Клиника</span>
+                <span class="record__description">ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ РЯЗАНСКОЙ ОБЛАСТИ "ГОРОДСКАЯ ДЕТСКАЯ ПОЛИКЛИНИКА № 2"</span>
+                <span class="record__header">Специализация</span>
+                <span class="record__description">КАРДИОЛОГИЯ</span>
+                <span class="record__header">Дата и время посещения</span>
+                <span class="record__description">25.06.2020, 08:40</span>
+            </section>
+        </div>
+        <input type="submit" value="ЗАПИСАТЬСЯ" class="step__button">
+    </form>
+<!--    final step    -->
+    <article class="step">
+        <section class="record">
+            <h3 class="record__title">Данные о записи</h3>
+            <span class="record__header">Клиника</span>
+            <span class="record__description">ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ РЯЗАНСКОЙ ОБЛАСТИ "ГОРОДСКАЯ ДЕТСКАЯ ПОЛИКЛИНИКА № 2"</span>
+            <span class="record__header">Специализация</span>
+            <span class="record__description">КАРДИОЛОГИЯ</span>
+            <span class="record__header">Дата и время посещения</span>
+            <span class="record__description">25.06.2020, 08:40</span>
+        </section>
+        <h3 class="step__title">Данные о записи отправлены на email@email.com (если указано)</h3>
+        <div class="step__even">
+            <input type="submit" value="РАСПЕЧАТАТЬ" class="step__button">
+            <input type="submit" value="НА ГЛАВНУЮ" class="step__button">
         </div>
     </article>
 </main>
