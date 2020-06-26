@@ -338,6 +338,8 @@
   margin-top: 1.5625vw;
 }
 .timepicker__time {
+  text-decoration: none;
+  color: #000000;
   font-family: "Roboto Regular", sans-serif;
   font-weight: 400;
   font-size: 2.5rem;
@@ -345,16 +347,16 @@
   background-color: rgba(156, 204, 101, 0.25);
   box-sizing: border-box;
   height: 4.3125rem;
-  width: 10.75rem;
+  min-width: 10.75rem;
   border-radius: 2.15625rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 1.5625vw;
+  padding: 0 2rem;
   transition: 0.25s;
 }
-.timepicker__time:hover {
-  border-width: 0;
+.timepicker__time:hover, .timepicker__time_selected {
   background-color: #9CCC65;
   color: #ffffff;
   transition: 0.25s;

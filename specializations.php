@@ -21,7 +21,7 @@
     </div>
     <article class="step">
         <div class="step__header">
-            <label class="step__title" for="search-2">Шаг 2. Выбор специализации</label>
+            <label class="step__title" for="search-2">Шаг 2. Выбор услуги</label>
 <!--            <input class="step__search" id="search-2" placeholder="Поиск" type="text">-->
         </div>
         <section class="list">

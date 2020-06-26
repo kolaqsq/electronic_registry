@@ -340,6 +340,8 @@ $black: #000000
   margin-top: (30px / 1920px * 100vw)
 
   &__time
+    text-decoration: none
+    color: $black
     font-family: 'Roboto Regular', sans-serif
     font-weight: 400
     font-size: 2.5rem
@@ -347,16 +349,16 @@ $black: #000000
     background-color: $lightgreen
     box-sizing: border-box
     height: 4.3125rem
-    width: 10.75rem
+    min-width: 10.75rem
     border-radius: 2.15625rem
     display: flex
     align-items: center
     justify-content: center
     margin-right: (30px / 1920px * 100vw)
+    padding: 0 2rem
     transition: .25s
 
-    &:hover
-      border-width: 0
+    &:hover, &_selected
       background-color: $green
       color: $white
       transition: .25s
