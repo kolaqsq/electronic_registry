@@ -39,6 +39,45 @@
   font-size: 4rem;
   margin: 0 0 1.5625vw 1.5625vw;
 }
+.hero__description_warning {
+  color: #EF5350;
+  font-size: 2rem;
+}
+.hero__buttons {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.hero__button {
+  text-decoration: none;
+  font-family: "Roboto Light", sans-serif;
+  color: #9CCC65;
+  font-weight: 300;
+  font-size: 2.5rem;
+  border: 5px solid #9CCC65;
+  background: none;
+  box-sizing: border-box;
+  height: 6.25rem;
+  width: 31.25rem;
+  border-radius: 3.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  transition: 0.25s;
+  margin: 0 0 1.5625vw 1.5625vw;
+}
+.hero__button:focus {
+  outline: none;
+}
+.hero__button:hover {
+  border-width: 0;
+  background-color: #9CCC65;
+  color: #ffffff;
+  transition: 0.25s;
+}
 
 .main {
   display: flex;

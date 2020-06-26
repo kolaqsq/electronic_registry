@@ -46,6 +46,45 @@ $black: #000000
     font-size: 4rem
     margin: 0 0 (30px / 1920px * 100vw) (30px / 1920px * 100vw)
 
+    &_warning
+      color: $red
+      font-size: 2rem
+
+  &__buttons
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    justify-content: flex-start
+    width: 100%
+
+  &__button
+    text-decoration: none
+    font-family: 'Roboto Light', sans-serif
+    color: $green
+    font-weight: 300
+    font-size: 2.5rem
+    border: 5px solid $green
+    background: none
+    box-sizing: border-box
+    height: 6.25rem
+    width: 31.25rem
+    border-radius: 3.125rem
+    display: flex
+    align-items: center
+    justify-content: center
+    align-self: center
+    transition: .25s
+    margin: 0 0 (30px / 1920px * 100vw) (30px / 1920px * 100vw)
+
+    &:focus
+      outline: none
+
+    &:hover
+      border-width: 0
+      background-color: $green
+      color: $white
+      transition: .25s
+
 .main
   display: flex
   flex-flow: column nowrap
