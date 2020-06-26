@@ -94,8 +94,11 @@
   width: 100%;
 }
 .main__back {
-  justify-self: flex-start;
-  align-self: center;
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 300;
   font-size: 4rem;
   padding: 0;
@@ -224,6 +227,8 @@
 }
 
 .item {
+  text-decoration: none;
+  color: #000000;
   display: flex;
   flex-flow: row wrap;
   border-bottom: 5px solid #9CCC65;

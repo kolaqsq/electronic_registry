@@ -6,8 +6,6 @@
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
-
     <link href="css/main.css" rel="stylesheet">
     <link href="css/fonts.css" rel="stylesheet">
 
@@ -19,16 +17,17 @@
         <h1 class="hero__title">Электронная регистратура</h1>
         <span class="hero__description">Рязанская область</span>
         <?php
+        require 'database.php';
         try {
-            $conn = new PDO("mysql:host=std-mysql;dbname=std_950", "std_950", "901109qsq");
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $database = connect();
             echo '<div class="hero__buttons">
-                <a class="hero__button" href="index.php">Записаться на прием</a>
+                <a class="hero__button" href="clinics.php">Записаться на приём</a>
                 <a class="hero__button" href="index.php">Удалить запись</a>
             </div>';
         } catch (PDOException $e) {
             echo '<br><span class="hero__description hero__description_warning">Ошибка подключения к базе данных: ' . $e->getMessage() . '</span>';
         }
+        $database = null
         ?>
     </div>
 </header>
