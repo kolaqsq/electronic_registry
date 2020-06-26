@@ -184,6 +184,8 @@
   margin: 6.25vw 0;
 }
 .step__button {
+  text-decoration: none;
+  color: #000000;
   font-family: "Roboto Light", sans-serif;
   font-weight: 300;
   font-size: 3rem;
