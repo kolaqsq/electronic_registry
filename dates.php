@@ -66,7 +66,7 @@
 
             echo '<div class="timepicker">';
             while ($row = $query->fetch()) {
-                echo '<a class="timepicker__time" href="personal.php?clinic_id=' . $_GET['clinic_id'] .
+                echo '<a class="timepicker__time" href="customer_form.php?clinic_id=' . $_GET['clinic_id'] .
                     '&specialization_id=' . $_GET['specialization_id'] .
                     '&date_id=' . $_GET['date_id'] .
                     '&time_id=' . $row['id'] . '">' . $row["available_time"] . '</a>';
