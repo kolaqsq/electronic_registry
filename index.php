@@ -22,7 +22,7 @@
             $database = connect();
             echo '<div class="hero__buttons">
                 <a class="hero__button" href="clinics.php">Записаться на приём</a>
-                <a class="hero__button" href="index.php">Удалить запись</a>
+                <a class="hero__button" href="delete.php">Отменить запись</a>
             </div>';
         } catch (PDOException $e) {
             echo '<br><span class="hero__description hero__description_warning">Ошибка подключения к базе данных: ' . $e->getMessage() . '</span>';
