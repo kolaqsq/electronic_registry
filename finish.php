@@ -43,6 +43,17 @@
                 $query->execute([$id, $_GET['clinic_id'], $_GET['specialization_id'], $_GET['date_id'],
                     $_GET['time_id'], $_POST['name'], $_POST['birth'], $_POST['phone'], $_POST['e-mail']]);
 
+                $query = $database->prepare("update ELREG_available_times set available = false where id = ?");
+                $query->execute([$_GET['time_id']]);
+
+                $query = $database->prepare("select * from ELREG_available_times where date_id = ? and available = true");
+                $query->execute([$_GET['date_id']]);
+
+                if (!$query->fetch()) {
+                    $query = $database->prepare("update ELREG_available_dates set available = false where id = ?");
+                    $query->execute([$_GET['date_id']]);
+                }
+
                 header('Refresh:0; url=finish.php?id=' . $id . '&clinic_id=' . $_GET['clinic_id'] .
                     '&specialization_id=' . $_GET['specialization_id'] .
                     '&date_id=' . $_GET['date_id'] .
