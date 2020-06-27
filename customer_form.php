@@ -90,7 +90,7 @@
                 ?>
             </section>
         </div>
-        <input class="step__button" type="submit" value="ЗАПИСАТЬСЯ">
+        <input class="step__button" type="submit" value="Записаться">
     </form>
 </main>
 </body>

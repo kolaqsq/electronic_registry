@@ -25,7 +25,7 @@
             <input class="personal__input" id="id" name="id" placeholder="Введите номер записи" required
                    type="text">
 
-            <input class="step__button" type="submit" value="ПРОВЕРИТЬ">
+            <input class="step__button" type="submit" value="Проверить">
         </form>
         <?php
         if (isset($_POST['id'])) {
@@ -80,7 +80,7 @@
                     
                     <input type="text" name="id" style="display: none" value="' . $_POST['id'] . '">
                                         
-                    <input class="step__button" type="submit" value="ОТМЕНИТЬ ЗАПИСЬ">
+                    <input class="step__button" type="submit" value="Отменить запись">
                     
                     </section>
                     ';

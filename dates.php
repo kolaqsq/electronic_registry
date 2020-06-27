@@ -34,7 +34,7 @@
         ?>
         <div class="timepicker">
             <?php
-            $query = $database->prepare("select id, available_date from ELREG_available_dates where clinic_id = ? and specialization_id = ? and available = true");
+            $query = $database->prepare("select id, date_format(available_date, '%d.%m.%Y') as available_date from ELREG_available_dates where clinic_id = ? and specialization_id = ? and available = true");
             $query->execute([$_GET['clinic_id'], $_GET['specialization_id']]);
 
             while ($row = $query->fetch()) {
@@ -54,14 +54,14 @@
         </div>
         <?php
         if (isset($_GET['date_id'])) {
-            $query = $database->prepare("select available_date from ELREG_available_dates where id = ?");
+            $query = $database->prepare("select date_format(available_date, '%d.%m.%Y') as available_date from ELREG_available_dates where id = ?");
             $query->execute([$_GET['date_id']]);
 
             while ($row = $query->fetch()) {
                 echo '<h3 class="step__title">Запись на ' . $row["available_date"] . '</h3>';
             }
 
-            $query = $database->prepare("select id, available_time from ELREG_available_times where date_id = ? and available = true");
+            $query = $database->prepare("select id, date_format(available_time, '%H:%i') as available_time from ELREG_available_times where date_id = ? and available = true");
             $query->execute([$_GET['date_id']]);
 
             echo '<div class="timepicker">';

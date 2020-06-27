@@ -110,7 +110,7 @@
                     
                 </section>';
                     if ($row["customer_e-mail"] != '')
-                        echo '<h3 class="step__title">Данные о записи отправлены на адрес ' . $row["customer_e-mail"] . '</h3>';
+                        echo '<h3 class="step__comment">Данные о записи отправлены на адрес ' . $row["customer_e-mail"] . '</h3>';
 
                 }
             }
@@ -118,7 +118,7 @@
             ?>
             <div class="step__even">
                 <!--            <input class="step__button" type="submit" value="РАСПЕЧАТАТЬ">-->
-                <a class="step__button" href="index.php">НА ГЛАВНУЮ</a>
+                <a class="step__button" href="index.php">На главную</a>
             </div>
     </article>
 </main>

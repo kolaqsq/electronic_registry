@@ -60,7 +60,7 @@
         }
         ?>
         <div class="step__even">
-            <a class="step__button" href="index.php">НА ГЛАВНУЮ</a>
+            <a class="step__button" href="index.php">На главную</a>
         </div>
     </article>
 </main>

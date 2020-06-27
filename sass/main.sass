@@ -106,6 +106,7 @@ $black: #000000
     display: flex
     align-items: center
     justify-content: center
+    align-self: center
     font-weight: 300
     font-size: 4rem
     padding: 0
@@ -135,6 +136,7 @@ $black: #000000
     display: flex
     justify-self: center
     align-self: center
+    text-align: center
 
 .step
   display: flex
@@ -142,7 +144,7 @@ $black: #000000
   align-items: flex-start
   justify-content: flex-start
   width: 100%
-  margin-top: (150px / 1920px * 100vw)
+  margin-top: (60px / 1920px * 100vw)
 
   &__header
     display: flex
@@ -155,6 +157,12 @@ $black: #000000
     font-family: 'Segoe UI Light', sans-serif
     font-weight: 300
     font-size: 3.25rem
+    margin: 0
+
+  &__comment
+    font-family: 'Segoe UI Light', sans-serif
+    font-weight: 300
+    font-size: 2.25rem
     margin: 0
 
   &__search
@@ -175,13 +183,14 @@ $black: #000000
   &__specialization
     font-family: 'Segoe UI Regular', sans-serif
     font-weight: 400
-    font-size: 2.25rem
+    font-size: 1.875rem
+    text-transform: uppercase
     border-bottom: 5px solid $green
     box-sizing: border-box
     width: 100%
     padding: (30px / 1920px * 100vw)
     background-color: $lightgreen
-    margin-top: (80px / 1920px * 100vw)
+    margin: (60px / 1920px * 100vw) 0 (10px / 1920px * 100vw) 0
 
   &__columns
     display: grid
@@ -206,6 +215,7 @@ $black: #000000
     align-items: center
     justify-content: center
     align-self: center
+    margin: (30px / 1920px * 100vw)
     transition: .25s
 
     &:focus
@@ -231,7 +241,7 @@ $black: #000000
   align-items: flex-start
   justify-content: flex-start
   width: 100%
-  margin-top: (80px / 1920px * 100vw)
+  margin-top: (60px / 1920px * 100vw)
 
 .item
   text-decoration: none
@@ -254,85 +264,86 @@ $black: #000000
   &__title
     font-family: 'Segoe UI Regular', sans-serif
     font-weight: 400
-    font-size: 2.25rem
+    font-size: 1.875rem
+    text-transform: uppercase
     flex: 2 0 100%
 
   &__phone
     font-family: 'Segoe UI Regular', sans-serif
     font-weight: 400
-    font-size: 1.875rem
+    font-size: 1.75rem
     margin-right: (20px / 1920px * 100vw)
 
   &__address
     font-family: 'Segoe UI Light', sans-serif
     font-weight: 300
-    font-size: 1.875rem
+    font-size: 1.75rem
 
-.datepicker
-  display: grid
-  grid-template-columns: 1fr 1fr
-  grid-gap: (120px / 1920px * 100vw)
-  width: 100%
-  margin: (120px / 1920px * 100vw) 0
-
-.calendar
-  display: flex
-  border: 5px solid $green
-  flex-flow: column nowrap
-  align-items: center
-  justify-self: flex-start
-  width: 100%
-  box-sizing: border-box
-
-  &__header
-    grid-column: 1 / 8
-    font-family: 'Segoe UI Regular', sans-serif
-    font-weight: 400
-    font-size: 2.25rem
-    border-bottom: 5px solid $green
-    box-sizing: border-box
-    background-color: $lightgreen
-    text-align: center
-    width: 100%
-    padding: (30px / 1920px * 100vw) 0
-
-  &__date-wrap
-    display: grid
-    grid-template-columns: repeat(7, 1fr)
-    box-sizing: border-box
-    width: 100%
-
-  &__date
-    font-family: 'Segoe UI Regular', sans-serif
-    font-weight: 400
-    font-size: 2.25rem
-    border-bottom: 5px solid $green
-    box-sizing: border-box
-    text-align: center
-    height: (120px / 1920px * 100vw)
-    display: flex
-    align-items: center
-    justify-content: center
-
-    &:nth-child(7n):nth-last-child(-n+8) ~ &
-      border-bottom: none !important
-
-    &_holiday
-      color: $red
-
-    &_today
-      border-left: 5px solid $green
-      border-right: 5px solid $green
-
-
-    &_available
-      background-color: $lightgreen
-      transition: .25s
-
-      &:hover
-        background-color: $green
-        color: $white
-        transition: .25s
+//.datepicker
+//  display: grid
+//  grid-template-columns: 1fr 1fr
+//  grid-gap: (120px / 1920px * 100vw)
+//  width: 100%
+//  margin: (120px / 1920px * 100vw) 0
+//
+//.calendar
+//  display: flex
+//  border: 5px solid $green
+//  flex-flow: column nowrap
+//  align-items: center
+//  justify-self: flex-start
+//  width: 100%
+//  box-sizing: border-box
+//
+//  &__header
+//    grid-column: 1 / 8
+//    font-family: 'Segoe UI Regular', sans-serif
+//    font-weight: 400
+//    font-size: 2.25rem
+//    border-bottom: 5px solid $green
+//    box-sizing: border-box
+//    background-color: $lightgreen
+//    text-align: center
+//    width: 100%
+//    padding: (30px / 1920px * 100vw) 0
+//
+//  &__date-wrap
+//    display: grid
+//    grid-template-columns: repeat(7, 1fr)
+//    box-sizing: border-box
+//    width: 100%
+//
+//  &__date
+//    font-family: 'Segoe UI Regular', sans-serif
+//    font-weight: 400
+//    font-size: 2.25rem
+//    border-bottom: 5px solid $green
+//    box-sizing: border-box
+//    text-align: center
+//    height: (120px / 1920px * 100vw)
+//    display: flex
+//    align-items: center
+//    justify-content: center
+//
+//    &:nth-child(7n):nth-last-child(-n+8) ~ &
+//      border-bottom: none !important
+//
+//    &_holiday
+//      color: $red
+//
+//    &_today
+//      border-left: 5px solid $green
+//      border-right: 5px solid $green
+//
+//
+//    &_available
+//      background-color: $lightgreen
+//      transition: .25s
+//
+//      &:hover
+//        background-color: $green
+//        color: $white
+//        transition: .25s
 
 .timepicker
   display: flex
@@ -340,13 +351,13 @@ $black: #000000
   align-items: center
   justify-content: flex-start
   width: 100%
-  margin-top: (30px / 1920px * 100vw)
+  margin-bottom: (30px / 1920px * 100vw)
 
   &__time
     text-decoration: none
     color: $black
-    font-family: 'Roboto Regular', sans-serif
-    font-weight: 400
+    font-family: 'Roboto Light', sans-serif
+    font-weight: 300
     font-size: 2.5rem
     border: 5px solid $green
     background-color: $lightgreen
@@ -357,7 +368,7 @@ $black: #000000
     display: flex
     align-items: center
     justify-content: center
-    margin-right: (30px / 1920px * 100vw)
+    margin: (30px / 1920px * 100vw) (30px / 1920px * 100vw) (30px / 1920px * 100vw) 0
     padding: 0 2rem
     transition: .25s
 
@@ -382,20 +393,20 @@ $black: #000000
   &__label
     font-family: 'Segoe UI Light', sans-serif
     font-weight: 300
-    font-size: 3rem
+    font-size: 2.25rem
 
   &__input
     color: $gray
     font-family: 'Segoe UI Light', sans-serif
     font-weight: 300
-    font-size: 2.5rem
+    font-size: 2rem
     width: 100%
     height: 69px
     border: 5px solid $green
     box-sizing: border-box
     border-radius: 34.5px
-    padding-left: 34.5px
-    margin-bottom: (60px / 1920px * 100vw)
+    padding: 0 34.5px
+    margin-bottom: (30px / 1920px * 100vw)
 
     &:focus
       outline: none
@@ -409,7 +420,7 @@ $black: #000000
   &__label-check
     font-family: 'Segoe UI Light', sans-serif
     font-weight: 300
-    font-size: 2.25rem
+    font-size: 1.75rem
     width: 100%
     margin-left: (20px / 1920px * 100vw)
 
@@ -462,14 +473,14 @@ $black: #000000
   &__header
     font-family: 'Segoe UI Light', sans-serif
     font-weight: 300
-    font-size: 3rem
+    font-size: 2.25rem
     width: 100%
 
   &__description
     font-family: 'Segoe UI Regular', sans-serif
     font-weight: 400
-    font-size: 2.25rem
-    margin: 0 0 (60px / 1920px * 100vw) 0
+    font-size: 2rem
+    margin: 0 0 (30px / 1920px * 100vw) 0
     background-color: $lightgreen
     border-bottom: 5px solid $green
     width: 100%

@@ -100,6 +100,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
   font-weight: 300;
   font-size: 4rem;
   padding: 0;
@@ -128,6 +129,7 @@
   display: flex;
   justify-self: center;
   align-self: center;
+  text-align: center;
 }
 
 .step {
@@ -136,7 +138,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
-  margin-top: 7.8125vw;
+  margin-top: 3.125vw;
 }
 .step__header {
   display: flex;
@@ -149,6 +151,12 @@
   font-family: "Segoe UI Light", sans-serif;
   font-weight: 300;
   font-size: 3.25rem;
+  margin: 0;
+}
+.step__comment {
+  font-family: "Segoe UI Light", sans-serif;
+  font-weight: 300;
+  font-size: 2.25rem;
   margin: 0;
 }
 .step__search {
@@ -169,13 +177,14 @@
 .step__specialization {
   font-family: "Segoe UI Regular", sans-serif;
   font-weight: 400;
-  font-size: 2.25rem;
+  font-size: 1.875rem;
+  text-transform: uppercase;
   border-bottom: 5px solid #9CCC65;
   box-sizing: border-box;
   width: 100%;
   padding: 1.5625vw;
   background-color: rgba(156, 204, 101, 0.25);
-  margin-top: 4.1666666667vw;
+  margin: 3.125vw 0 0.5208333333vw 0;
 }
 .step__columns {
   display: grid;
@@ -200,6 +209,7 @@
   align-items: center;
   justify-content: center;
   align-self: center;
+  margin: 1.5625vw;
   transition: 0.25s;
 }
 .step__button:focus {
@@ -226,7 +236,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
-  margin-top: 4.1666666667vw;
+  margin-top: 3.125vw;
 }
 
 .item {
@@ -250,86 +260,20 @@
 .item__title {
   font-family: "Segoe UI Regular", sans-serif;
   font-weight: 400;
-  font-size: 2.25rem;
+  font-size: 1.875rem;
+  text-transform: uppercase;
   flex: 2 0 100%;
 }
 .item__phone {
   font-family: "Segoe UI Regular", sans-serif;
   font-weight: 400;
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   margin-right: 1.0416666667vw;
 }
 .item__address {
   font-family: "Segoe UI Light", sans-serif;
   font-weight: 300;
-  font-size: 1.875rem;
-}
-
-.datepicker {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 6.25vw;
-  width: 100%;
-  margin: 6.25vw 0;
-}
-
-.calendar {
-  display: flex;
-  border: 5px solid #9CCC65;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-self: flex-start;
-  width: 100%;
-  box-sizing: border-box;
-}
-.calendar__header {
-  grid-column: 1/8;
-  font-family: "Segoe UI Regular", sans-serif;
-  font-weight: 400;
-  font-size: 2.25rem;
-  border-bottom: 5px solid #9CCC65;
-  box-sizing: border-box;
-  background-color: rgba(156, 204, 101, 0.25);
-  text-align: center;
-  width: 100%;
-  padding: 1.5625vw 0;
-}
-.calendar__date-wrap {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  box-sizing: border-box;
-  width: 100%;
-}
-.calendar__date {
-  font-family: "Segoe UI Regular", sans-serif;
-  font-weight: 400;
-  font-size: 2.25rem;
-  border-bottom: 5px solid #9CCC65;
-  box-sizing: border-box;
-  text-align: center;
-  height: 6.25vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.calendar__date:nth-child(7n):nth-last-child(-n+8) ~ .calendar__date {
-  border-bottom: none !important;
-}
-.calendar__date_holiday {
-  color: #EF5350;
-}
-.calendar__date_today {
-  border-left: 5px solid #9CCC65;
-  border-right: 5px solid #9CCC65;
-}
-.calendar__date_available {
-  background-color: rgba(156, 204, 101, 0.25);
-  transition: 0.25s;
-}
-.calendar__date_available:hover {
-  background-color: #9CCC65;
-  color: #ffffff;
-  transition: 0.25s;
+  font-size: 1.75rem;
 }
 
 .timepicker {
@@ -338,13 +282,13 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  margin-top: 1.5625vw;
+  margin-bottom: 1.5625vw;
 }
 .timepicker__time {
   text-decoration: none;
   color: #000000;
-  font-family: "Roboto Regular", sans-serif;
-  font-weight: 400;
+  font-family: "Roboto Light", sans-serif;
+  font-weight: 300;
   font-size: 2.5rem;
   border: 5px solid #9CCC65;
   background-color: rgba(156, 204, 101, 0.25);
@@ -355,7 +299,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 1.5625vw;
+  margin: 1.5625vw 1.5625vw 1.5625vw 0;
   padding: 0 2rem;
   transition: 0.25s;
 }
@@ -381,20 +325,20 @@
 .personal__label {
   font-family: "Segoe UI Light", sans-serif;
   font-weight: 300;
-  font-size: 3rem;
+  font-size: 2.25rem;
 }
 .personal__input {
   color: rgba(0, 0, 0, 0.75);
   font-family: "Segoe UI Light", sans-serif;
   font-weight: 300;
-  font-size: 2.5rem;
+  font-size: 2rem;
   width: 100%;
   height: 69px;
   border: 5px solid #9CCC65;
   box-sizing: border-box;
   border-radius: 34.5px;
-  padding-left: 34.5px;
-  margin-bottom: 3.125vw;
+  padding: 0 34.5px;
+  margin-bottom: 1.5625vw;
 }
 .personal__input:focus {
   outline: none;
@@ -408,7 +352,7 @@
 .personal__label-check {
   font-family: "Segoe UI Light", sans-serif;
   font-weight: 300;
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   width: 100%;
   margin-left: 1.0416666667vw;
 }
@@ -461,14 +405,14 @@
 .record__header {
   font-family: "Segoe UI Light", sans-serif;
   font-weight: 300;
-  font-size: 3rem;
+  font-size: 2.25rem;
   width: 100%;
 }
 .record__description {
   font-family: "Segoe UI Regular", sans-serif;
   font-weight: 400;
-  font-size: 2.25rem;
-  margin: 0 0 3.125vw 0;
+  font-size: 2rem;
+  margin: 0 0 1.5625vw 0;
   background-color: rgba(156, 204, 101, 0.25);
   border-bottom: 5px solid #9CCC65;
   width: 100%;
@@ -505,6 +449,17 @@
     width: 25rem;
     border-radius: 2rem;
     margin: 1.5625vw;
+  }
+
+  .step__columns {
+    grid-template-columns: 1fr;
+  }
+
+  .step__button {
+    font-size: 2rem;
+    height: 4rem;
+    width: 25rem;
+    border-radius: 2rem;
   }
 }
 
