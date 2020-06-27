@@ -55,6 +55,7 @@ $black: #000000
     flex-flow: row wrap
     align-items: center
     justify-content: flex-start
+    margin-bottom: (30px / 1920px * 100vw)
     width: 100%
 
   &__button
@@ -62,7 +63,7 @@ $black: #000000
     font-family: 'Roboto Light', sans-serif
     color: $green
     font-weight: 300
-    font-size: 2.5rem
+    font-size: 2.75rem
     border: 5px solid $green
     background: none
     box-sizing: border-box
@@ -74,7 +75,7 @@ $black: #000000
     justify-content: center
     align-self: center
     transition: .25s
-    margin: 0 0 (30px / 1920px * 100vw) (30px / 1920px * 100vw)
+    margin: (30px / 1920px * 100vw) 0 (30px / 1920px * 100vw) (30px / 1920px * 100vw)
 
     &:focus
       outline: none
@@ -473,5 +474,6 @@ $black: #000000
     border-bottom: 5px solid $green
     width: 100%
 
+@import "tablet"
 
 
