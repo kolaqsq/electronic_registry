@@ -6,6 +6,9 @@
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/main.js"></script>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 
@@ -14,14 +17,14 @@
 
     <title>Электронная регистратура. Запись на приём</title>
 </head>
-<body class="page">
+<body class="page" onload="show()">
 <main class="main">
     <div class="main__header">
         <?php
         echo '<a class="main__back material-icons-round" href="customer_form.php?clinic_id=' . $_GET['clinic_id'] .
             '&specialization_id=' . $_GET['specialization_id'] .
             '&date_id=' . $_GET['date_id'] .
-            '&time_id=' . $_GET['time_id'] . '">keyboard_arrow_left</a>';
+            '&time_id=' . $_GET['time_id'] . '" onclick="hide()">keyboard_arrow_left</a>';
         ?>
         <h2 class="main__mode">Запись на приём</h2>
     </div>
@@ -115,11 +118,10 @@
 
                 }
             }
-
             ?>
             <div class="step__even">
                 <button class="step__button" onclick="window.print()">Распечатать</button>
-                <a class="step__button" href="../index.php">На главную</a>
+                <a class="step__button" href="../index.php" onclick="hide()">На главную</a>
             </div>
     </article>
 </main>

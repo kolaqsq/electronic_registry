@@ -6,6 +6,9 @@
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/main.js"></script>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 
@@ -14,10 +17,10 @@
 
     <title>Электронная регистратура. Отмена записи</title>
 </head>
-<body class="page">
+<body class="page" onload="show()">
 <main class="main">
     <div class="main__header">
-        <a class="main__back material-icons-round" href="../index.php">keyboard_arrow_left</a>
+        <a class="main__back material-icons-round" href="../index.php" onclick="hide()">keyboard_arrow_left</a>
         <h2 class="main__mode">Отмена записи</h2>
     </div>
     <article class="step">
@@ -26,7 +29,7 @@
             <input class="personal__input" id="id" name="id" placeholder="Введите номер записи" required
                    type="text">
 
-            <input class="step__button" type="submit" value="Проверить">
+            <input class="step__button" type="submit" value="Проверить"  onclick="hide()">
         </form>
         <?php
         if (isset($_POST['id'])) {
@@ -81,7 +84,7 @@
                     
                     <input type="text" name="id" style="display: none" value="' . $_POST['id'] . '">
                                         
-                    <input class="step__button" type="submit" value="Отменить запись">
+                    <input class="step__button" type="submit" value="Отменить запись"  onclick="hide()">
                     
                     </section>';
             }

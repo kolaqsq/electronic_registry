@@ -6,6 +6,9 @@
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/main.js"></script>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 
@@ -14,11 +17,11 @@
 
     <title>Электронная регистратура. Запись на приём</title>
 </head>
-<body class="page">
+<body class="page" onload="show()">
 <main class="main">
     <div class="main__header">
         <a class="main__back material-icons-round"
-           href="specializations.php?clinic_id=<?php echo $_GET['clinic_id'] ?>">keyboard_arrow_left</a>
+           href="specializations.php?clinic_id=<?php echo $_GET['clinic_id'] ?>" onclick="hide()">keyboard_arrow_left</a>
         <h2 class="main__mode">Запись на приём</h2>
     </div>
     <article class="step">
@@ -43,13 +46,13 @@
                     if ($_GET['date_id'] == $row['id'])
                         echo '<a class="timepicker__time timepicker__time_selected" href="dates.php?clinic_id=' . $_GET['clinic_id'] .
                             '&specialization_id=' . $_GET['specialization_id'] .
-                            '&date_id=' . $row['id'] . '">' . $row["available_date"] . '</a>';
+                            '&date_id=' . $row['id'] . '" onclick="hide()">' . $row["available_date"] . '</a>';
                     else echo '<a class="timepicker__time" href="dates.php?clinic_id=' . $_GET['clinic_id'] .
                         '&specialization_id=' . $_GET['specialization_id'] .
-                        '&date_id=' . $row['id'] . '">' . $row["available_date"] . '</a>';
+                        '&date_id=' . $row['id'] . '" onclick="hide()">' . $row["available_date"] . '</a>';
                 } else echo '<a class="timepicker__time" href="dates.php?clinic_id=' . $_GET['clinic_id'] .
                     '&specialization_id=' . $_GET['specialization_id'] .
-                    '&date_id=' . $row['id'] . '">' . $row["available_date"] . '</a>';
+                    '&date_id=' . $row['id'] . '" onclick="hide()">' . $row["available_date"] . '</a>';
             }
             ?>
         </div>
@@ -70,7 +73,7 @@
                 echo '<a class="timepicker__time" href="customer_form.php?clinic_id=' . $_GET['clinic_id'] .
                     '&specialization_id=' . $_GET['specialization_id'] .
                     '&date_id=' . $_GET['date_id'] .
-                    '&time_id=' . $row['id'] . '">' . $row["available_time"] . '</a>';
+                    '&time_id=' . $row['id'] . '" onclick="hide()">' . $row["available_time"] . '</a>';
             };
             echo '</div>';
         }

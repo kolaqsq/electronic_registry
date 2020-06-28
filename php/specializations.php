@@ -6,6 +6,9 @@
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/main.js"></script>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 
@@ -14,10 +17,10 @@
 
     <title>Электронная регистратура. Запись на приём</title>
 </head>
-<body class="page">
+<body class="page" onload="show()">
 <main class="main">
     <div class="main__header">
-        <a class="main__back material-icons-round" href="clinics.php">keyboard_arrow_left</a>
+        <a class="main__back material-icons-round" href="clinics.php" onclick="hide()">keyboard_arrow_left</a>
         <h2 class="main__mode">Запись на приём</h2>
     </div>
     <article class="step">
@@ -35,7 +38,7 @@
             $query->execute([$_GET['clinic_id']]);
 
             while ($row = $query->fetch()) {
-                echo '<a class="item" href="dates.php?clinic_id=' . $_GET['clinic_id'] . '&specialization_id=' . $row["id"] . '">
+                echo '<a class="item" href="dates.php?clinic_id=' . $_GET['clinic_id'] . '&specialization_id=' . $row["id"] . '" onclick="hide()">
                     <span class="item__title">' . $row["specialization_name"] . '</span>
                 </a>';
             }

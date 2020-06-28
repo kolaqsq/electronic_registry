@@ -6,6 +6,9 @@
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../js/main.js"></script>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 
@@ -14,10 +17,10 @@
 
     <title>Электронная регистратура. Отмена записи</title>
 </head>
-<body class="page">
+<body class="page" onload="show()">
 <main class="main">
     <div class="main__header">
-        <a class="main__back material-icons-round" href="delete.php">keyboard_arrow_left</a>
+        <a class="main__back material-icons-round" href="delete.php" onclick="hide()">keyboard_arrow_left</a>
         <h2 class="main__mode">Отмена записи</h2>
     </div>
     <h3 class="step__title">Вы успешно отменили запись</h3>
@@ -61,7 +64,7 @@
         }
         ?>
         <div class="step__even">
-            <a class="step__button" href="../index.php">На главную</a>
+            <a class="step__button" href="../index.php" onclick="hide()">На главную</a>
         </div>
     </article>
 </main>
