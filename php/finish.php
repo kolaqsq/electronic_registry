@@ -7,9 +7,10 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/fonts.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/fonts.css" rel="stylesheet">
 
     <title>Электронная регистратура. Запись на приём</title>
 </head>
@@ -118,7 +119,7 @@
             ?>
             <div class="step__even">
                 <button class="step__button" onclick="window.print()">Распечатать</button>
-                <a class="step__button" href="index.php">На главную</a>
+                <a class="step__button" href="../index.php">На главную</a>
             </div>
     </article>
 </main>

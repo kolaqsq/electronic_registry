@@ -6,6 +6,8 @@
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+
     <link href="css/main.css" rel="stylesheet">
     <link href="css/fonts.css" rel="stylesheet">
 
@@ -17,12 +19,12 @@
         <h1 class="hero__title">Электронная регистратура</h1>
         <span class="hero__description">Рязанская область</span>
         <?php
-        require 'database.php';
+        require 'php/database.php';
         try {
             $database = connect();
             echo '<div class="hero__buttons">
-                <a class="hero__button" href="clinics.php">Записаться на приём</a>
-                <a class="hero__button" href="delete.php">Отменить запись</a>
+                <a class="hero__button" href="php/clinics.php">Записаться на приём</a>
+                <a class="hero__button" href="php/delete.php">Отменить запись</a>
             </div>';
         } catch (PDOException $e) {
             echo '<br><span class="hero__description hero__description_warning">Ошибка подключения к базе данных: ' . $e->getMessage() . '</span>';

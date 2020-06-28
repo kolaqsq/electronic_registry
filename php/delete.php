@@ -7,16 +7,17 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
 
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/fonts.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/fonts.css" rel="stylesheet">
 
     <title>Электронная регистратура. Отмена записи</title>
 </head>
 <body class="page">
 <main class="main">
     <div class="main__header">
-        <a class="main__back material-icons-round" href="index.php">keyboard_arrow_left</a>
+        <a class="main__back material-icons-round" href="../index.php">keyboard_arrow_left</a>
         <h2 class="main__mode">Отмена записи</h2>
     </div>
     <article class="step">
@@ -82,8 +83,7 @@
                                         
                     <input class="step__button" type="submit" value="Отменить запись">
                     
-                    </section>
-                    ';
+                    </section>';
             }
         }
         ?>
