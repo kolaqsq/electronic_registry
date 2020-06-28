@@ -560,5 +560,35 @@
     border-radius: 6.25px;
   }
 }
+@media print {
+  .main {
+    padding: 0;
+  }
+  .main__header {
+    display: none;
+  }
+
+  .step {
+    margin: 0;
+  }
+  .step__title {
+    display: none;
+  }
+  .step__button {
+    display: none;
+  }
+  .step__comment {
+    display: none;
+  }
+
+  .record__description {
+    background: none;
+    border: none;
+  }
+
+  .record__header {
+    font-size: 1.75rem;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

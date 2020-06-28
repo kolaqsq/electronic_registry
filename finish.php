@@ -117,7 +117,7 @@
 
             ?>
             <div class="step__even">
-                <!--            <input class="step__button" type="submit" value="РАСПЕЧАТАТЬ">-->
+                <button class="step__button" onclick="window.print()">Распечатать</button>
                 <a class="step__button" href="index.php">На главную</a>
             </div>
     </article>
