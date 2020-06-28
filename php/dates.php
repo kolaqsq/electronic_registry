@@ -41,6 +41,11 @@
             $query = $database->prepare("select id, date_format(available_date, '%d.%m.%Y') as available_date from ELREG_available_dates where clinic_id = ? and specialization_id = ? and available = true");
             $query->execute([$_GET['clinic_id'], $_GET['specialization_id']]);
 
+            if (!$query->fetch())
+                echo '<h3 class="step__comment">Талонов нет</h3>';
+
+            $query->execute([$_GET['clinic_id'], $_GET['specialization_id']]);
+
             while ($row = $query->fetch()) {
                 if (isset($_GET['date_id'])) {
                     if ($_GET['date_id'] == $row['id'])
